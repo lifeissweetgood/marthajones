@@ -34,7 +34,7 @@ Game = {
                 if(at_edge) {
                     Crafty.e('Tree').at(x, y);
                 } else if(Math.random() < 0.06) {
-                    Crafty.e('Bush').at(x, y);
+                    Crafty.e('Human').at(x, y);
                 }
             }
         }
