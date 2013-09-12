@@ -28,6 +28,14 @@ Crafty.c('Actor', {
     },
 });
 
+Crafty.c('PlayerCharacter', {
+    init: function() {
+        this.requires('Actor, Fourway, Color')
+        .fourway(4)
+        .color('rgb(20, 75, 40)');
+    }
+});
+
 Crafty.c('Tree', {
     init: function() {
         this.requires('Actor, Color');
