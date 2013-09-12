@@ -24,5 +24,17 @@ Game = {
         // Start crafty and set background color
         Crafty.init(Game.width(), Game.height());
         Crafty.background('green');
+
+        for(var x=0; x < Game.map_grid.width; x++) {
+            for(var y=0; y < Game.map_grid.height; y++) {
+                var at_edge = x == 0 || x == Game.map_grid.width - 1 || y == 0 || y = Game.map_grid.height - 1;
+
+                if(at_edge) {
+                    Crafty.e('Tree').at(x, y);
+                } else if(Math.random() < 0.06) {
+                    Crafty.e('Bush').at(x, y);
+                }
+            }
+        }
     }
 }
