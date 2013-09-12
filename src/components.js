@@ -30,7 +30,7 @@ Crafty.c('Actor', {
 
 Crafty.c('PlayerCharacter', {
     init: function() {
-        this.requires('Actor, Fourway, Color, Collision')
+        this.requires('Actor, Fourway, Collision,spr_martha')
         .fourway(4)
         .color('rgb(20, 75, 40)')
         .stopOnSolids()
@@ -63,8 +63,7 @@ Crafty.c('PlayerCharacter', {
 
 Crafty.c('Human', {
     init: function() {
-        this.requires('Actor, Color');
-        this.color('rgb(170, 125, 40)');
+        this.requires('Actor, spr_rose_light');
     },
 
     inform: function() {
