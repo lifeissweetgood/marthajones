@@ -67,7 +67,7 @@ Crafty.c('Human', {
         this.color('rgb(170, 125, 40)');
     },
 
-    collect: function() {
+    inform: function() {
         this.destroy();
     }
 });
