@@ -33,7 +33,9 @@ Crafty.c('PlayerCharacter', {
         this.requires('Actor, Fourway, Color, Collision')
         .fourway(4)
         .color('rgb(20, 75, 40)')
-        .stopOnSolids();
+        .stopOnSolids()
+        // Whenever entity hits a solid entity, do stuff to solid entity
+        .onHit('Human', this.tellHuman);
     },
 
     // Registers a stop-movement function to be called when this entity
@@ -50,6 +52,23 @@ Crafty.c('PlayerCharacter', {
             this.x -= this._movement.x;
             this.y -= this._movement.y;
         }
+    },
+
+    // "Tell" human about the doctor
+    tellHuman: function(data) {
+        human = data[0].obj;
+        human.inform();
+    }
+});
+
+Crafty.c('Human', {
+    init: function() {
+        this.requires('Actor, Color, Solid');
+        this.color('rgb(170, 125, 40)');
+    },
+
+    collect: function() {
+        this.destroy();
     }
 });
 
@@ -57,12 +76,5 @@ Crafty.c('Tree', {
     init: function() {
         this.requires('Actor, Color, Solid');
         this.color('rgb(20, 125, 40)');
-    },
-});
-
-Crafty.c('Bush', {
-    init: function() {
-        this.requires('Actor, Color, Solid');
-        this.color('rgb(20, 185, 40)');
     },
 });
