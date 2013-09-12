@@ -23,7 +23,7 @@ Game = {
     start: function() {
         // Start crafty and set background color
         Crafty.init(Game.width(), Game.height());
-        Crafty.background('green');
+        Crafty.background('rgb(249, 223, 125)');
 
         for(var x=0; x < Game.map_grid.width; x++) {
             for(var y=0; y < Game.map_grid.height; y++) {
