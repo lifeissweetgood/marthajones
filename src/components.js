@@ -32,7 +32,6 @@ Crafty.c('PlayerCharacter', {
     init: function() {
         this.requires('Actor, Fourway, Collision,spr_martha')
         .fourway(4)
-        .color('rgb(20, 75, 40)')
         .stopOnSolids()
         // Whenever entity hits a solid entity, do stuff to solid entity
         .onHit('Human', this.tellHuman);
