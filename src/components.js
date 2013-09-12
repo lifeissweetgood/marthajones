@@ -63,7 +63,7 @@ Crafty.c('PlayerCharacter', {
 
 Crafty.c('Human', {
     init: function() {
-        this.requires('Actor, Color, Solid');
+        this.requires('Actor, Color');
         this.color('rgb(170, 125, 40)');
     },
 
