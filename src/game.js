@@ -38,5 +38,7 @@ Game = {
                 }
             }
         }
+
+        Crafty.scene('Loading');
     }
 }
