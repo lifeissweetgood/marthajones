@@ -1,11 +1,11 @@
 Game = {
     // Defines size of grid and size of tiles in grid
     map_grid: {
-        width: 40,
-        height: 32,
+        width: 32,
+        height: 30,
         tile: {
-            width: 32,
-            height:32
+            width: 30,
+            height:111
         }
     },
 
